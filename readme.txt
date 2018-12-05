@@ -1,0 +1,1 @@
+Save pages from the moonboard website problems list as 1.html,2.html etc and extractnames.py will extract the IDs of problems and then run scrape problems to work through any new problems and gather the full data.
