@@ -105,12 +105,18 @@ def main():
     #print(existing)
     addresses=get_addresses()
     #print(addresses)
+    existing_number=0
+    new_number=0
     for address in addresses:
         if address not in existing:
+            new_number+=1
             data=scrape(address)
             line=get_scrape_line()
             get_items(line,address)
             os.remove("temp.txt")
+        else:
+            existing_number+=1
+    print(str(existing_number)+" existing problems, "+str(new_number)+" new problems and "+str(existing_number+new_number)+" total problems"
             
 main()
 
