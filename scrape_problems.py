@@ -40,6 +40,7 @@ def scrape(url):#downloads webpage passed to it and saves to temp location
     f = urllib.request.urlopen(req)
     scrape_file.write(f.read().decode('utf-8'))
     scrape_file.close()
+    print("Just scraped "+url)
 
 def get_scrape_line():#find the line with all the useful data in
     scrape_file=open("temp.txt","r")
@@ -116,7 +117,7 @@ def main():
             os.remove("temp.txt")
         else:
             existing_number+=1
-    print(str(existing_number)+" existing problems, "+str(new_number)+" new problems and "+str(existing_number+new_number)+" total problems"
+    print(str(existing_number)+" existing problems, "+str(new_number)+" new problems and "+str(existing_number+new_number)+" total problems")
             
 main()
 
